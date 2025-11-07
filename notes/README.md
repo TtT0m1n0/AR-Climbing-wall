@@ -1,11 +1,11 @@
 **Získavanie chytov z nasnímania steny (bez manuálneho ťukania):**
 
-budeme si ukladať:
-⦁	konzistentné ID (poradie/číslovanie).
-⦁	ich 3D pozíciu v priestore,
-⦁	ich farbu (na určenie trasy alebo kategórie),
+budeme si ukladať: \
+⦁	konzistentné ID (poradie/číslovanie). \
+⦁	ich 3D pozíciu v priestore, \
+⦁	ich farbu (na určenie trasy alebo kategórie), 
 
-Výsledný JSON (ukážka)
+Výsledný JSON (ukážka) \
 {
   "holds": [
     {
