@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public string selectedWallId = "wall_001";
+
     // sem si uložíme cestu k JSON súboru steny
     public string selectedWallPath;
 

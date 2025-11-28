@@ -3,9 +3,20 @@
 using System;
 using System.Collections.Generic;
 
-[Serializable]
+[System.Serializable]
+public class RouteData
+{
+    public string routeId;
+    public string wallId;
+    public string routeName;
+    public string difficulty;
+    public string color;
+    public List<int> holds;
+}
+
+[System.Serializable]
 public class RouteCollection
 {
-    public string wallId;                // ku ktorej stene patrí
-    public List<RouteData> routes;       // zoznam všetkých ciest na tejto stene
+    public string wallId;
+    public List<RouteData> routes;
 }
