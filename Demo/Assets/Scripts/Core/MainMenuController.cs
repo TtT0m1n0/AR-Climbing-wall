@@ -22,6 +22,8 @@ public class MainMenuController : MonoBehaviour
     // zavola sa po kliknuti na "Vybrať cestu"
     public void OnSelectRouteClicked()
     {
+        Debug.Log("► Klik na Vybrať cestu!");
+
         selectRoutePanel.SetActive(true);
 
         // vymazat stare tlacidla
