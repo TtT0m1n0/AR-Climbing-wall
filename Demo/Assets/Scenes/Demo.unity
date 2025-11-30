@@ -514,8 +514,8 @@ GameObject:
   - component: {fileID: 213973472}
   - component: {fileID: 213973471}
   - component: {fileID: 213973470}
-  - component: {fileID: 213973469}
   - component: {fileID: 213973473}
+  - component: {fileID: 213973474}
   m_Layer: 0
   m_Name: Hold1
   m_TagString: Untagged
@@ -538,20 +538,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 235092662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &213973469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213973467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffee0f6d2a672c04ea8c3544dce92faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClimbingHold
-  baseColor: {r: 1, g: 0.6470588, b: 0, a: 1}
-  litColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!135 &213973470
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -567,7 +553,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -641,7 +627,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b7f817a10030c4b96586358db847df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoldSelectable
-  holdId: 0
+  holdId: 1
+  normalColor: {r: 1, g: 0.5490196, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0, b: 0, a: 1}
+  isSelected: 0
+--- !u!114 &213973474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213973467}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffee0f6d2a672c04ea8c3544dce92faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClimbingHold
+  baseColor: {r: 1, g: 0.5490196, b: 0, a: 1}
+  litColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &235092661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,7 +1546,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 350, y: 528.6}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &591975743
 MonoBehaviour:
@@ -1792,7 +1795,6 @@ GameObject:
   - component: {fileID: 681767511}
   - component: {fileID: 681767510}
   - component: {fileID: 681767509}
-  - component: {fileID: 681767508}
   - component: {fileID: 681767512}
   m_Layer: 0
   m_Name: Hold3
@@ -1816,20 +1818,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 235092662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &681767508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681767506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffee0f6d2a672c04ea8c3544dce92faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClimbingHold
-  baseColor: {r: 1, g: 0.6470588, b: 0, a: 1}
-  litColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!135 &681767509
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1845,7 +1833,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1919,7 +1907,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b7f817a10030c4b96586358db847df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoldSelectable
-  holdId: 0
+  holdId: 3
+  normalColor: {r: 1, g: 0.54901963, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0, b: 0, a: 1}
+  isSelected: 0
 --- !u!1 &701157344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,7 +1957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 753011259}
   - component: {fileID: 753011260}
-  - component: {fileID: 753011261}
+  - component: {fileID: 753011262}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2006,7 +1997,7 @@ MonoBehaviour:
   rotationSpeed: 90
   lookSpeed: 60
   cam: {fileID: 0}
---- !u!114 &753011261
+--- !u!114 &753011262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2015,10 +2006,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 753011257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f955635443266468f80a29b914acbd, type: 3}
+  m_Script: {fileID: 11500000, guid: 73e9ff42554f4d2429c13f27120ce5a7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HoldClickController
-  cam: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::HoldClickController1
+  cam: {fileID: 1200199071}
   maxDistance: 100
 --- !u!1 &754110869
 GameObject:
@@ -2111,7 +2102,7 @@ Transform:
   m_GameObject: {fileID: 754110869}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 13.93, y: 3.94, z: -10.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2768,6 +2759,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RouteCreateController
   createRoutePanel: {fileID: 591975741}
   selectHoldsPanel: {fileID: 1947422638}
+  inputName: {fileID: 2030522268}
+  dropdownDifficulty: {fileID: 837134421}
+  dropdownColor: {fileID: 2076854730}
+  btnSave: {fileID: 1167275576}
+  btnCancel: {fileID: 2028149904}
   isSelecting: 0
   selectedHolds: []
 --- !u!4 &1010436429
@@ -2896,6 +2892,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: RouteCreateController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3087,7 +3095,6 @@ GameObject:
   - component: {fileID: 1063494502}
   - component: {fileID: 1063494501}
   - component: {fileID: 1063494500}
-  - component: {fileID: 1063494499}
   - component: {fileID: 1063494503}
   m_Layer: 0
   m_Name: Hold2
@@ -3111,20 +3118,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 235092662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1063494499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1063494497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffee0f6d2a672c04ea8c3544dce92faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClimbingHold
-  baseColor: {r: 1, g: 0.6470588, b: 0, a: 1}
-  litColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!135 &1063494500
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3140,7 +3133,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3214,7 +3207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b7f817a10030c4b96586358db847df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoldSelectable
-  holdId: 0
+  holdId: 2
+  normalColor: {r: 1, g: 0.54901963, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0, b: 0, a: 1}
+  isSelected: 0
 --- !u!1 &1126372528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,10 +3461,10 @@ RectTransform:
   - {fileID: 393013572}
   m_Father: {fileID: 1947422639}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -15}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1167275576
 MonoBehaviour:
@@ -3514,13 +3510,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1913837669}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1010436428}
+        m_TargetAssemblyTypeName: RouteCreateController, Assembly-CSharp
+        m_MethodName: SaveRoute
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4013,10 +4009,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
@@ -4024,7 +4024,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1913837670}
     - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1010436428}
+    - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
@@ -4032,11 +4040,23 @@ PrefabInstance:
       value: OnCreateRouteClicked
       objectReference: {fileID: 0}
     - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResetAllHolds
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MainMenuController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: RouteCreateController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6513323802907783211, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
@@ -4045,6 +4065,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6513323802907783211, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397698538884487217, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397698538884487217, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397698538884487217, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397698538884487217, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882706807399750701, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -936
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882706807399750701, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -468
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882706807399750701, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968978651705900312, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968978651705900312, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9000657779153295962, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
@@ -4369,7 +4425,6 @@ GameObject:
   - component: {fileID: 1471972752}
   - component: {fileID: 1471972751}
   - component: {fileID: 1471972750}
-  - component: {fileID: 1471972749}
   - component: {fileID: 1471972753}
   m_Layer: 0
   m_Name: Hold5
@@ -4393,20 +4448,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 235092662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1471972749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471972747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffee0f6d2a672c04ea8c3544dce92faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClimbingHold
-  baseColor: {r: 1, g: 0.6470588, b: 0, a: 1}
-  litColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!135 &1471972750
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4422,7 +4463,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4496,7 +4537,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b7f817a10030c4b96586358db847df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoldSelectable
-  holdId: 0
+  holdId: 5
+  normalColor: {r: 1, g: 0.54901963, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0, b: 0, a: 1}
+  isSelected: 0
 --- !u!1 &1544243538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5377,17 +5421,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1913837669 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 518541826660400033, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
-  m_PrefabInstance: {fileID: 1395860298}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1913837670 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1361587393141907237, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
   m_PrefabInstance: {fileID: 1395860298}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913837669}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6b03745894aab94dbeddf4f45392af1, type: 3}
@@ -5433,10 +5472,10 @@ RectTransform:
   - {fileID: 2028149903}
   m_Father: {fileID: 1913837674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -600, y: 0}
+  m_SizeDelta: {x: 300, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947422640
 MonoBehaviour:
@@ -5611,10 +5650,10 @@ RectTransform:
   - {fileID: 565317739}
   m_Father: {fileID: 1947422639}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -65}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028149904
 MonoBehaviour:
@@ -5660,13 +5699,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1913837669}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1010436428}
+        m_TargetAssemblyTypeName: RouteCreateController, Assembly-CSharp
+        m_MethodName: StopSelecting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5921,7 +5960,6 @@ GameObject:
   - component: {fileID: 2054351004}
   - component: {fileID: 2054351003}
   - component: {fileID: 2054351002}
-  - component: {fileID: 2054351001}
   - component: {fileID: 2054351005}
   m_Layer: 0
   m_Name: Hold4
@@ -5945,20 +5983,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 235092662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2054351001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054350999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffee0f6d2a672c04ea8c3544dce92faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClimbingHold
-  baseColor: {r: 1, g: 0.6470588, b: 0, a: 1}
-  litColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!135 &2054351002
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5974,7 +5998,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -6048,7 +6072,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b7f817a10030c4b96586358db847df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoldSelectable
-  holdId: 0
+  holdId: 4
+  normalColor: {r: 1, g: 0.54901963, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0, b: 0, a: 1}
+  isSelected: 0
 --- !u!1 &2055947201
 GameObject:
   m_ObjectHideFlags: 0

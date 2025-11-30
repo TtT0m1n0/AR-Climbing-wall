@@ -2,25 +2,22 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
+using System.IO;
 
 public class RouteCreateController : MonoBehaviour
 {
     public static RouteCreateController Instance;
 
-    [Header("Panels")]
     public GameObject createRoutePanel;
     public GameObject selectHoldsPanel;
 
-    [Header("Input Fields")]
     public TMP_InputField inputName;
     public TMP_Dropdown dropdownDifficulty;
     public TMP_Dropdown dropdownColor;
 
-    [Header("Buttons")]
     public Button btnSave;
     public Button btnCancel;
 
-    [Header("Selection")]
     public bool isSelecting = false;
     public List<HoldSelectable> selectedHolds = new List<HoldSelectable>();
 
@@ -31,17 +28,19 @@ public class RouteCreateController : MonoBehaviour
 
     public void StartSelecting()
     {
+        Debug.Log("StartSelecting CALLED");
+
         isSelecting = true;
         selectedHolds.Clear();
 
         createRoutePanel.SetActive(false);
         selectHoldsPanel.SetActive(true);
-
-        Debug.Log("Selection mode ON");
     }
 
     public void StopSelecting()
     {
+        Debug.Log("StopSelecting CALLED");
+
         isSelecting = false;
 
         foreach (var h in selectedHolds)
@@ -51,63 +50,114 @@ public class RouteCreateController : MonoBehaviour
 
         selectHoldsPanel.SetActive(false);
         createRoutePanel.SetActive(true);
-
-        Debug.Log("Selection mode OFF");
     }
 
     public void ToggleHoldSelection(HoldSelectable hold)
     {
+        bool nowSelected;
+
         if (selectedHolds.Contains(hold))
         {
             selectedHolds.Remove(hold);
             hold.SetSelected(false);
+            nowSelected = false;
         }
         else
         {
             selectedHolds.Add(hold);
             hold.SetSelected(true);
+            nowSelected = true;
         }
 
-        Debug.Log("Vybrané chyty: " + selectedHolds.Count);
+        int id = hold.holdId;
+        Vector3 pos = hold.transform.position;
+
+        string colorHex = "UNKNOWN";
+        var rend = hold.GetComponent<Renderer>();
+        if (rend != null)
+            colorHex = ColorUtility.ToHtmlStringRGB(rend.material.color);
+
+        Debug.Log(
+            $"Hold {(nowSelected ? "SELECTED" : "UNSELECTED")} " +
+            $"id={id}, pos=({pos.x:F2}, {pos.y:F2}, {pos.z:F2}), color=#{colorHex}"
+        );
+
+        Debug.Log("Aktuálne vybraných chytov: " + selectedHolds.Count);
     }
-
-    public List<int> GetSelectedHoldIds()
+    public void ResetAllHolds()
     {
-        List<int> ids = new List<int>();
-        foreach (var h in selectedHolds)
-            ids.Add(h.holdId);
+        isSelecting = false;
+        selectedHolds.Clear();
 
-        return ids;
+        HoldSelectable[] allHolds = FindObjectsOfType<HoldSelectable>();
+        foreach (var h in allHolds)
+        {
+            h.SetSelected(false);
+        }
+
+        Debug.Log("ResetAllHolds – všetky chyty odznačené");
     }
 
     public void SaveRoute()
     {
-         Debug.Log("SaveRoute START");
-
-        Debug.Log("inputName = " + (inputName ? "OK" : "NULL"));
-        Debug.Log("dropdownDifficulty = " + (dropdownDifficulty ? "OK" : "NULL"));
-        Debug.Log("dropdownColor = " + (dropdownColor ? "OK" : "NULL"));
-        Debug.Log("GameManager.Instance = " + (GameManager.Instance ? "OK" : "NULL"));
-
-        string routeName = inputName.text;
-        string difficulty = dropdownDifficulty.options[dropdownDifficulty.value].text;
-        string color = dropdownColor.options[dropdownColor.value].text;
-
-        var route = new RouteData
+        if (selectedHolds.Count == 0)
         {
-            routeId = System.Guid.NewGuid().ToString(),
-            wallId = GameManager.Instance.selectedWallId,
+            Debug.LogWarning("Nie sú vybrané žiadne chyty, nie je čo uložiť.");
+            return;
+        }
+
+        string routeName = string.IsNullOrEmpty(inputName.text)
+            ? "Route_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss")
+            : inputName.text;
+
+        List<RouteHoldData> holdsToSave = new List<RouteHoldData>();
+
+        foreach (var h in selectedHolds)
+        {
+            var rend = h.GetComponent<Renderer>();
+            Color col = rend != null ? rend.material.color : Color.white;
+            string hex = ColorUtility.ToHtmlStringRGB(col);
+
+            holdsToSave.Add(new RouteHoldData
+            {
+                id = h.holdId,
+                position = h.transform.position,
+                color = hex
+            });
+        }
+
+        RouteFileData fileData = new RouteFileData
+        {
             routeName = routeName,
-            difficulty = difficulty,
-            color = color,
-            holds = GetSelectedHoldIds()
+            holds = holdsToSave
         };
 
-        RouteSaver.SaveRoute(route);
+        string dir = Path.Combine(Application.dataPath, "walls");
+        if (!Directory.Exists(dir))
+            Directory.CreateDirectory(dir);
 
-        Debug.Log("Saved route: " + route.routeName);
+        string path = Path.Combine(dir, routeName + ".json");
+
+        string json = JsonUtility.ToJson(fileData, true);
+        File.WriteAllText(path, json);
+
+        Debug.Log("Cesta uložená do: " + path);
 
         StopSelecting();
     }
+}
 
+[System.Serializable]
+public class RouteHoldData
+{
+    public int id;
+    public Vector3 position;
+    public string color;
+}
+
+[System.Serializable]
+public class RouteFileData
+{
+    public string routeName;
+    public List<RouteHoldData> holds;
 }

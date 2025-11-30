@@ -1,38 +1,53 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Renderer), typeof(Collider))]
 public class HoldSelectable : MonoBehaviour
 {
     public int holdId;
-    public bool isSelected;
+    public Color normalColor = Color.gray;
+    public Color selectedColor = Color.yellow;
+    public bool isSelected = false;
 
-    private Renderer rend;
-    private Color originalColor;
+    Renderer rend;
 
-    void Start()
+    void Awake()
     {
         rend = GetComponent<Renderer>();
-        originalColor = rend.material.color;
-    }
 
-    void OnMouseDown()
-    {
+        if (normalColor == Color.gray)
+            normalColor = rend.material.color;
 
-        // Ak nie sme v selection mode → ignoruj klik
-        if (!RouteCreateController.Instance.isSelecting)
-            return;
-
-        Debug.Log("Klik na chyt!");
-
-        // Skús pridať / odobrať chyt
-        RouteCreateController.Instance.ToggleHoldSelection(this);
+        ApplyVisual();
     }
 
     public void SetSelected(bool selected)
     {
         isSelected = selected;
-        if (selected)
-            rend.material.color = Color.white;   // vybraný chyt
+        ApplyVisual();
+    }
+
+    public void SetBaseColor(Color c)
+    {
+        normalColor = c;
+        if (!isSelected)
+            ApplyVisual();
+    }
+
+    void ApplyVisual()
+    {
+        var mat = rend.material;
+
+        if (isSelected)
+        {
+            mat.color = selectedColor;
+            mat.EnableKeyword("_EMISSION");
+            mat.SetColor("_EMISSIONColor", selectedColor);
+        }
         else
-            rend.material.color = originalColor; // pôvodná farba
+        {
+            mat.color = normalColor;
+            mat.DisableKeyword("_EMISSION");
+            mat.SetColor("_EMISSIONColor", Color.black);
+        }
     }
 }

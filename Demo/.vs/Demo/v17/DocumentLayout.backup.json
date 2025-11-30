@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|c:\\users\\tomino\\virtual climbing wall\\ar-climbing-wall\\demo\\assets\\scripts\\core\\mainmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\mainmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\assets\\prefabs\\glow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|solutionrelative:assets\\prefabs\\glow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\assets\\scripts\\core\\holdselectable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\holdselectable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\assets\\scripts\\core\\routecreatecontroller..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\routecreatecontroller..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\assets\\scripts\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77DEB61-50BA-3D2B-BA85-CD07C2DB2C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainMenuController.cs",
+              "DocumentMoniker": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Scripts\\Core\\MainMenuController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\MainMenuController.cs",
+              "ToolTip": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Scripts\\Core\\MainMenuController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\MainMenuController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T09:45:29.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Scripts\\Core\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Scripts\\Core\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T09:45:06.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RouteCreateController..cs",
+              "DocumentMoniker": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Scripts\\Core\\RouteCreateController..cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\RouteCreateController..cs",
+              "ToolTip": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Scripts\\Core\\RouteCreateController..cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\RouteCreateController..cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T09:42:28.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HoldSelectable.cs",
+              "DocumentMoniker": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Scripts\\Core\\HoldSelectable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\HoldSelectable.cs",
+              "ToolTip": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Scripts\\Core\\HoldSelectable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\HoldSelectable.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T09:33:09.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Glow.cs",
+              "DocumentMoniker": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Prefabs\\Glow.cs",
+              "RelativeDocumentMoniker": "Assets\\Prefabs\\Glow.cs",
+              "ToolTip": "C:\\Users\\Tomino\\Virtual Climbing Wall\\AR-Climbing-wall\\Demo\\Assets\\Prefabs\\Glow.cs",
+              "RelativeToolTip": "Assets\\Prefabs\\Glow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T09:48:17.576Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
