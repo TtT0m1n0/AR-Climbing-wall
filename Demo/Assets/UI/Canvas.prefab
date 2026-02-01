@@ -703,6 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuController
   selectRoutePanel: {fileID: 2802471853058089350}
+  createRoutePanel: {fileID: 0}
   routesContent: {fileID: 71385191137328503}
   routeButtonTemplate: {fileID: 182950064940771911}
 --- !u!1 &706119698704105698
@@ -1385,14 +1386,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4157818516215709681}
   - {fileID: 4619857174020783435}
   - {fileID: 8196793110353044871}
-  - {fileID: 4157818516215709681}
   m_Father: {fileID: 3742504706050589057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 200.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -200}
   m_SizeDelta: {x: 420, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6361673954081533087

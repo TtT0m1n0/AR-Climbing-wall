@@ -2763,7 +2763,7 @@ MonoBehaviour:
   dropdownDifficulty: {fileID: 837134421}
   dropdownColor: {fileID: 2076854730}
   btnSave: {fileID: 1167275576}
-  btnCancel: {fileID: 2028149904}
+  btnCancel: {fileID: 1554622591}
   isSelecting: 0
   selectedHolds: []
 --- !u!4 &1010436429
@@ -4007,6 +4007,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4157818516215709681, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4787186434484665013, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -4077,11 +4081,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397698538884487217, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7397698538884487217, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 7882706807399750701, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4094,6 +4098,10 @@ PrefabInstance:
     - target: {fileID: 7882706807399750701, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196793110353044871, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 8968978651705900312, guid: 4ad3f644aea5cc14b96651da75c38ce4, type: 3}
       propertyPath: m_LocalPosition.z

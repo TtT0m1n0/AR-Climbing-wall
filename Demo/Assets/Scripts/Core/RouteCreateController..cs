@@ -89,8 +89,8 @@ public class RouteCreateController : MonoBehaviour
         isSelecting = false;
         selectedHolds.Clear();
 
-        HoldSelectable[] allHolds = FindObjectsOfType<HoldSelectable>();
-        foreach (var h in allHolds)
+        HoldSelectable[] allHolds =
+            Object.FindObjectsByType<HoldSelectable>(FindObjectsSortMode.None); foreach (var h in allHolds)
         {
             h.SetSelected(false);
         }

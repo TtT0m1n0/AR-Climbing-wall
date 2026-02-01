@@ -98,8 +98,8 @@ public class MainMenuController : MonoBehaviour
         string json = File.ReadAllText(filePath);
         RouteFileData data = JsonUtility.FromJson<RouteFileData>(json);
 
-        HoldSelectable[] allHolds = FindObjectsOfType<HoldSelectable>();
-
+        HoldSelectable[] allHolds =
+            Object.FindObjectsByType<HoldSelectable>(FindObjectsSortMode.None);
         foreach (var h in allHolds)
             h.SetSelected(false);
 
